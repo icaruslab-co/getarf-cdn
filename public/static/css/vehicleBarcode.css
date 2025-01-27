@@ -1,0 +1,155 @@
+@page {
+    size: landscape;
+}
+
+body {
+    width: 100%;
+    background-color: rgb(204, 204, 204);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+
+    font-size: 0.24cm;
+    font-family: monospace;
+}
+
+h2 {
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+    font-size: x-small;
+}
+
+.main {
+    background-color: rgb(255, 255, 255);
+    width: 10cm;
+    margin: 0;
+    padding-left: 1mm;
+    padding-right: 1mm;
+    border: 0;
+
+    display: flex; 
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    page-break-before: always;
+    page-break-after: always;
+    page-break-inside: avoid;
+}
+
+/* İlk sayfa için page-break-before'u kaldır */
+.main:first-of-type {
+    page-break-before: auto;
+}
+
+/* Son sayfa için page-break-after'ı kaldır */
+.main:last-of-type {
+    page-break-after: auto;
+}
+
+.logo-div {
+    width: 10cm;
+    height: fit-content;
+    margin-top: 5mm;
+    margin-bottom: 5mm;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-div img {
+    height: 1.5cm;
+}
+
+.t-div {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.t-div p {
+    width: 100%;
+}
+
+.t-div strong{
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.t-div #order-no {
+    text-align: center;
+}
+
+.t-div #order-no strong {
+    font-size: 0.5cm;
+    position: absolute;
+    margin-left: -11mm;
+    margin-top: -2mm;
+}
+
+.t-div #datetime {
+    text-align: end;
+}
+
+.receiver p,
+span {
+    font-size: 0.33cm;
+}
+
+.barcode-section {
+    margin-bottom: 0.5mm;
+    width: 95%;
+    height: fit-content;
+
+    border: 0.5px solid black;
+    border-radius: 2.5px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.barcode-detail span{
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.footer {
+    font-weight: bold;
+    font-size: 0.45cm;
+}
+
+.footer p {
+    margin-left: 10mm;
+}
+
+
+.verticle-oriantation-text {}
+
+.barcode {}
+
+#barcode {}
+
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .main {
+        break-before: page;
+        break-after: page;
+        break-inside: avoid;
+    }
+}

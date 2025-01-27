@@ -1,10 +1,11 @@
 {
   "name": "getarf-cdn",
-  "version": "1",
+  "version": "3",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "port": "4143",
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -36,6 +37,7 @@
     "morgan": "^1.10.0",
     "node-bash-title": "^0.0.2",
     "nodemon": "^3.1.7",
+    "path": "^0.12.7",
     "request-ip": "^3.3.0",
     "ts-node": "^10.9.2"
   }

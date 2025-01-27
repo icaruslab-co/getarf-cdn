@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barkod Etiketi</title>
+    <link rel="stylesheet" href="./vehicleBarcode.css">
+</head>
+
+<body>
+    <page class="main">
+        <div class="logo-div">
+            <img src="https://sandbox-api.getarf.co/v3/static/express24.png" alt="" srcset="">
+        </div>
+        <div class="t-div">
+            <strong>Araç Barkod</strong>
+        </div>
+        <div class="barcode-section">
+            <svg id="barcode" alt="Barkod"> </svg>
+            <div class="barcode-detail">
+                <span>Barcode : </span><span>12345678</span>
+                <span>~</span>
+                <span>Plaka  : </span><span>20GL016</span>
+            </div>
+        </div>
+    </page>
+    <script src="https://sandbox-api.getarf.co/v3/static/barcodeJS.js"></script>
+    <script>
+        // Barkodu oluştur
+        JsBarcode("#barcode", "12345678", { format: "CODE128", width: 3, height: 100, displayValue: false  });
+    </script>
+    <script type="text/javascript">
+        window.print();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,210 @@
+@page {
+    size: landscape;
+}
+
+body {
+    width: 100%;
+    background-color: rgb(204, 204, 204);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+
+    font-size: 0.24cm;
+    font-family: monospace;
+}
+
+h2 {
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+    font-size: x-small;
+}
+
+.main {
+    background-color: rgb(255, 255, 255);
+    width: 10cm;
+    margin: 0;
+    padding-left: 1mm;
+    padding-right: 1mm;
+    border: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    page-break-before: always;
+    page-break-after: always;
+    page-break-inside: avoid;
+}
+
+/* İlk sayfa için page-break-before'u kaldır */
+.main:first-of-type {
+    page-break-before: auto;
+}
+
+/* Son sayfa için page-break-after'ı kaldır */
+.main:last-of-type {
+    page-break-after: auto;
+}
+
+.logo-div {
+    width: 100%;
+    height: 8mm;
+    margin-bottom: 2mm;
+}
+
+.logo-div img {
+    height: 1cm;
+}
+
+.t-div {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.t-div p {
+    width: 100%;
+    font-size: x-small;
+}
+
+.t-div #order-no {
+    text-align: center;
+}
+
+.t-div #order-no strong {
+    font-size: 0.5cm;
+    position: absolute;
+    margin-left: -11mm;
+    margin-top: -2mm;
+}
+
+.t-div #datetime {
+    text-align: end;
+}
+
+.sender {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 1mm;
+}
+
+.sender-group {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    font-size: 0.33cm;
+}
+
+.section-group {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+}
+
+.section {
+    padding-top: 0.5mm;
+    padding-bottom: 0.5mm;
+    margin-bottom: 0.5mm;
+    width: 100%;
+    height: fit-content;
+
+    border: 0.5px solid black;
+    border-radius: 2.5px;
+}
+
+.section-min {
+    padding-top: 0.2mm;
+    padding-bottom: 0.2mm;
+    padding-left: 0.2mm;
+    padding-right: 0.2mm;
+    width: 3cm;
+}
+
+.section-min span {
+
+    font-size: 0.40cm;
+}
+
+.receiver {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 1mm;
+}
+
+.receiver p,
+span {
+    font-size: 0.33cm;
+}
+
+.receiver-group {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-top: 0.5cm;
+}
+
+.receiver p {
+    width: 90%;
+}
+
+.barcode-section {
+    margin-bottom: 0.5mm;
+    width: 100%;
+    height: fit-content;
+
+    border: 0.5px solid black;
+    border-radius: 2.5px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer {
+    font-weight: bold;
+    font-size: 0.45cm;
+}
+
+.footer p {
+    margin-left: 10mm;
+}
+
+
+.verticle-oriantation-text {}
+
+.barcode {}
+
+#barcode {}
+
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .main {
+        break-before: page;
+        break-after: page;
+        break-inside: avoid;
+    }
+}

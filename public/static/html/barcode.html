@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barkod Etiketi</title>
+    <link rel="stylesheet" href="./legBarcode.css">
+</head>
+
+<body>
+    <page class="main">
+        <div class="logo-div">
+            <img src="https://sandbox-api.getarf.co/v3/static/express24.png" alt="" srcset="">
+        </div>
+        <div class="t-div">
+            <p>Takip No:</p>
+            <p id="order-no"><strong>12345678</strong></p>
+            <p id="datetime">14.01.2025 19:01:59</p>
+        </div>
+
+        <div class="section section-group details">
+            <span
+                style="text-orientation: mixed;writing-mode: vertical-rl;transform: rotate(180deg); font-weight: bold;font-size: 0.25cm;"><strong
+                    class="verticle-oriantation-text">GÖNDER</strong></span>
+            <div class="sender">
+                <span>Şube : <strong>Silopi Acente</strong></span>
+                <p style="font-size: 0.33cm;"><strong>Mehmet Emin Aslan</strong></p>
+                <div class="sender-group">
+                    <span>Şırnak / SİLOPİ</span>
+                    <span style="margin-right: 5mm;">Tel: 5335453954</span>
+                </div>
+            </div>
+        </div>
+        <div class="barcode-section">
+            <svg id="barcode" alt="Barkod"> </svg>
+        </div>
+        <div class="section-group">
+            <div class="section section-min">
+                <span>AÖ</span>
+                <hr style="margin: 0">
+                <p>
+                    Top. Ds/Kg
+                    <br>
+                    <span>20/20</span>
+                </p>
+                <hr style="margin: 0">
+                <p>
+                    Parça Sayısı
+                    <br>
+                    <span>20/20</span>
+                </p>
+                <hr style="margin: 0">
+            </div>
+            <div class="section section-group details">
+                <span
+                    style="text-orientation: mixed;writing-mode: vertical-rl;transform: rotate(180deg); font-weight: bold;font-size: 0.25cm;"><strong
+                        class="verticle-oriantation-text">ALICI</strong></span>
+                <div class="receiver">
+                    <p>
+                        ŞAKİRPAŞA MAHALLESİ 42028 (Sokak) ŞAKİRPAŞA MAH. TURHAN CEMAL BERİKER BULVARI NO:255/A SEYHAN Adana
+                    </p>
+                    <div class="receiver-group">
+                        <p>
+                           <strong> AUTO MOOD OTOMOTİV AUTO MOOD OTOMOTİV</strong>
+                        </p>
+                        <span style="margin-right: 5mm;">Tel: 05415411232</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section footer">
+            
+        </div>
+    </page>
+    <script src="https://sandbox-api.getarf.co/v3/static/barcodeJS.js"></script>
+    <script>
+        // Barkodu oluştur
+        JsBarcode("#barcode", "123456789101", { format: "CODE128", width: 2.4, height: 75, fontSize: 10, });
+    </script>
+    <script type="text/javascript">
+        window.print();
+    </script>
+</body>
+
+</html>
